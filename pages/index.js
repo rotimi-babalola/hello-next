@@ -4,7 +4,7 @@ import fetch from 'isomorphic-unfetch';
 
 const PostLink = (props) => (
   <li>
-    <Link href={`/post?title=${props.title}`} as={`/p/${props.id}`}>
+    <Link href={`/post?id=${props.show.id}`} as={`/p/${props.show.id}`}>
       <a>{props.title}</a>
     </Link>
   </li>
@@ -13,6 +13,7 @@ const PostLink = (props) => (
 const Index = (props) => (
   <Layout>
     <h1>Batman TV shows</h1>
+    {/* {console.log(props, 'props')} */}
     <ul>
       {props.shows.map(({ show }) => (
         <li key={show.id}>

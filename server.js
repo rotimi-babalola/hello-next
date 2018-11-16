@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const fetch = require('isomorphic-unfetch');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -10,7 +11,8 @@ app.prepare().then(() => {
 
   server.get('/p/:id', (req, res) => {
     const actualPage = '/post';
-    const queryParams = { title: req.params.id };
+    const queryParams = { id: req.params.id };
+
     app.render(req, res, actualPage, queryParams);
   });
 

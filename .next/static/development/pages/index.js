@@ -10011,8 +10011,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 var PostLink = function PostLink(props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "/post?title=".concat(props.title),
-    as: "/p/".concat(props.id)
+    href: "/post?id=".concat(props.show.id),
+    as: "/p/".concat(props.show.id)
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", null, props.title)));
 };
 

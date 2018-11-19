@@ -13,7 +13,6 @@ const PostLink = (props) => (
 const Index = (props) => (
   <Layout>
     <h1>Batman TV shows</h1>
-    {/* {console.log(props, 'props')} */}
     <ul>
       {props.shows.map(({ show }) => (
         <li key={show.id}>

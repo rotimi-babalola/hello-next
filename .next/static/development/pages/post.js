@@ -10007,7 +10007,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var Post = function Post(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], null, console.log(props, 'props'), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, props.show.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, new Date(props.show.premiered).getFullYear()), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.show.summary.replace(/<[/]?p>/g, '')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_2__["default"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", null, props.show.name), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", null, new Date(props.show.premiered).getFullYear()), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, props.show.summary.replace(/<[/]?p>/g, '')), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", {
     src: props.show.image.medium,
     alt: "Some alt"
   }));
@@ -10024,25 +10024,23 @@ function () {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            console.log(context, 'context');
             id = context.query.id;
-            console.log(id, 'id');
-            _context.next = 5;
+            _context.next = 3;
             return isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_3___default()("https://api.tvmaze.com/shows/".concat(id));
 
-          case 5:
+          case 3:
             res = _context.sent;
-            _context.next = 8;
+            _context.next = 6;
             return res.json();
 
-          case 8:
+          case 6:
             show = _context.sent;
             console.log("Name: ".concat(show.name));
             return _context.abrupt("return", {
               show: show
             });
 
-          case 11:
+          case 9:
           case "end":
             return _context.stop();
         }

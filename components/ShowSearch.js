@@ -1,40 +1,38 @@
 import React from 'react';
-import ShowContext from './show-context';
+import Link from 'next/link';
+import { AppContext } from '../components/AppProvider';
 
-class ShowSearch extends React.Component {
-
-  handleSubmit = async (evt) => {
-    // evt.preventDefault();
-    // const res = await fetch(`https://api.tvmaze.com/search/shows?q=${this.state.searchTerm}`);
-    // const data = await res.json();
-
-    // return data;
-    console.log(evt);
-  }
-
-  handleChange = (evt) => {
-    // this.setState({
-    //   searchTerm: evt.target.value,
-    // });
-    console.log(evt);
-  }
-
-  render() {
-    return (
-      <ShowContext.Consumer>
-        {({ setShows, setSearchTerm, searchTerm }) => (
-          <form onSubmit={() => setShows(this.handleSubmit)}>
-            <input
-              type="search"
-              name="search box"
-              placeholder="Search for show"
-              onChange={(evt) => console.log(evt)}
-            />
-          </form>
-        )}
-      </ShowContext.Consumer>
-    )
-  }
-}
+const ShowSearch = () => (
+  <AppContext.Consumer>
+    {
+      ({ state, handleChange, handleSubmit }) => {
+        return (
+          <React.Fragment>
+            <form onSubmit={handleSubmit}>
+              <input
+                type="search"
+                name="search box"
+                placeholder="Search for show"
+                onChange={handleChange}
+                value={state.searchTerm}
+              />
+            </form>
+            {
+              state.shows && <ul>
+                {state.shows.map(({ show }) => (
+                  <li key={show.id}>
+                    <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
+                      <a>{show.name}</a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            }
+          </React.Fragment>
+        )
+      }
+    }
+  </AppContext.Consumer>
+)
 
 export default ShowSearch;

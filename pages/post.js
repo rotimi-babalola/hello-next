@@ -5,8 +5,11 @@ const Post = (props) => (
   <Layout>
     <h1>{props.show.name}</h1>
     <h2>{new Date(props.show.premiered).getFullYear()}</h2>
-    <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p>
-    <img src={props.show.image.medium} alt="Some alt" />
+    {
+      props.show.summary ? <p>{props.show.summary.replace(/<[/]?p>/g, '')}</p> :
+        <p>No summary available</p>
+    }
+    <img src={props.show.image && props.show.image.medium} alt="Some alt" />
   </Layout>
 )
 

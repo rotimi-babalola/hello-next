@@ -1,40 +1,32 @@
-import Layout from '../components/MyLayout';
 import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
+import Layout from '../components/MyLayout';
+import AppProvider, { AppContext } from '../components/AppProvider';
 
-const PostLink = (props) => (
-  <li>
-    <Link href={`/post?id=${props.show.id}`} as={`/p/${props.show.id}`}>
-      <a>{props.title}</a>
-    </Link>
-  </li>
-)
-
-const Index = (props) => (
-  <Layout>
-    <h1>Batman TV shows</h1>
-    <ul>
-      {props.shows.map(({ show }) => (
-        <li key={show.id}>
-          <Link as={`/p/${show.id}`} href={`/post?id=${show.id}`}>
-            <a>{show.name}</a>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </Layout>
-);
-
-Index.getInitialProps = async function () {
-  const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-
-  const data = await res.json();
-
-  console.log(`Count: ${data.length}`);
-
-  return {
-    shows: data,
+class Index extends React.Component {
+  render() {
+    return (
+      <AppProvider>
+        <Layout>
+          <AppContext.Consumer>
+            <h1>Search for TV shows</h1>
+            {/* {(context) => console.log(context)} */}
+          </AppContext.Consumer>
+        </Layout>
+      </AppProvider>
+    );
   }
+}
+
+Index.getInitialProps = async function (context) {
+  // console.log(context, 'context');
+  // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
+
+  // const data = await res.json();
+
+  // console.log(`Count: ${data.length}`);
+
+  return {}
 }
 
 export default Index;

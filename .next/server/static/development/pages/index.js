@@ -334,37 +334,52 @@ var Layout = function Layout(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_AppProvider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/AppProvider */ "./components/AppProvider.js");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-jsx/style */ "styled-jsx/style");
+/* harmony import */ var styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "next/link");
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_AppProvider__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/AppProvider */ "./components/AppProvider.js");
+
 
 
 
 
 var ShowSearch = function ShowSearch() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_AppProvider__WEBPACK_IMPORTED_MODULE_2__["AppContext"].Consumer, null, function (_ref) {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_AppProvider__WEBPACK_IMPORTED_MODULE_3__["AppContext"].Consumer, null, function (_ref) {
     var state = _ref.state,
         handleChange = _ref.handleChange,
         handleSubmit = _ref.handleSubmit;
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-      onSubmit: handleSubmit
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h1", {
+      className: "jsx-1235777856"
+    }, "Search for TV shows"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", {
+      onSubmit: handleSubmit,
+      className: "jsx-1235777856"
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("input", {
       type: "search",
       name: "search box",
       placeholder: "Search for show",
       onChange: handleChange,
-      value: state.searchTerm
-    })), state.shows && react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, state.shows.map(function (_ref2) {
+      value: state.searchTerm,
+      className: "jsx-1235777856"
+    })), state.shows && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("ul", {
+      className: "jsx-1235777856"
+    }, state.shows.map(function (_ref2) {
       var show = _ref2.show;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        key: show.id
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+      return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("li", {
+        key: show.id,
+        className: "jsx-1235777856"
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
         as: "/p/".concat(show.id),
         href: "/post?id=".concat(show.id)
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, show.name)));
-    })));
+      }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
+        className: "jsx-1235777856"
+      }, show.name)));
+    })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(styled_jsx_style__WEBPACK_IMPORTED_MODULE_0___default.a, {
+      styleId: "1235777856",
+      css: "h1.jsx-1235777856,a.jsx-1235777856{font-family:\"Arial\";}ul.jsx-1235777856{padding:0;}li.jsx-1235777856{list-style:none;margin:5px 0;}a.jsx-1235777856{-webkit-text-decoration:none;text-decoration:none;color:blue;}a.jsx-1235777856:hover{opacity:0.6;}\n/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9yb3RpbWkvRG9jdW1lbnRzL0pTLVN0dWZmL2hlbGxvLW5leHQvY29tcG9uZW50cy9TaG93U2VhcmNoLmpzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQThCd0IsQUFHcUMsQUFJVixBQUlNLEFBS0ssQUFLVCxVQWJkLEVBY0EsSUFWZSxJQVJmLFNBU0EscUJBSWEsV0FDYiIsImZpbGUiOiIvVXNlcnMvcm90aW1pL0RvY3VtZW50cy9KUy1TdHVmZi9oZWxsby1uZXh0L2NvbXBvbmVudHMvU2hvd1NlYXJjaC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBSZWFjdCBmcm9tICdyZWFjdCc7XG5pbXBvcnQgTGluayBmcm9tICduZXh0L2xpbmsnO1xuaW1wb3J0IHsgQXBwQ29udGV4dCB9IGZyb20gJy4uL2NvbXBvbmVudHMvQXBwUHJvdmlkZXInO1xuXG5jb25zdCBTaG93U2VhcmNoID0gKCkgPT4gKFxuICA8QXBwQ29udGV4dC5Db25zdW1lcj5cbiAgICB7XG4gICAgICAoeyBzdGF0ZSwgaGFuZGxlQ2hhbmdlLCBoYW5kbGVTdWJtaXQgfSkgPT4ge1xuICAgICAgICByZXR1cm4gKFxuICAgICAgICAgIDxSZWFjdC5GcmFnbWVudD5cbiAgICAgICAgICAgIDxoMT5TZWFyY2ggZm9yIFRWIHNob3dzPC9oMT5cbiAgICAgICAgICAgIDxmb3JtIG9uU3VibWl0PXtoYW5kbGVTdWJtaXR9PlxuICAgICAgICAgICAgICA8aW5wdXRcbiAgICAgICAgICAgICAgICB0eXBlPVwic2VhcmNoXCJcbiAgICAgICAgICAgICAgICBuYW1lPVwic2VhcmNoIGJveFwiXG4gICAgICAgICAgICAgICAgcGxhY2Vob2xkZXI9XCJTZWFyY2ggZm9yIHNob3dcIlxuICAgICAgICAgICAgICAgIG9uQ2hhbmdlPXtoYW5kbGVDaGFuZ2V9XG4gICAgICAgICAgICAgICAgdmFsdWU9e3N0YXRlLnNlYXJjaFRlcm19XG4gICAgICAgICAgICAgIC8+XG4gICAgICAgICAgICA8L2Zvcm0+XG4gICAgICAgICAgICB7c3RhdGUuc2hvd3MgJiYgPHVsPlxuICAgICAgICAgICAgICB7c3RhdGUuc2hvd3MubWFwKCh7IHNob3cgfSkgPT4gKFxuICAgICAgICAgICAgICAgIDxsaSBrZXk9e3Nob3cuaWR9PlxuICAgICAgICAgICAgICAgICAgPExpbmsgYXM9e2AvcC8ke3Nob3cuaWR9YH0gaHJlZj17YC9wb3N0P2lkPSR7c2hvdy5pZH1gfT5cbiAgICAgICAgICAgICAgICAgICAgPGE+e3Nob3cubmFtZX08L2E+XG4gICAgICAgICAgICAgICAgICA8L0xpbms+XG4gICAgICAgICAgICAgICAgPC9saT5cbiAgICAgICAgICAgICAgKSl9XG4gICAgICAgICAgICA8L3VsPlxuICAgICAgICAgICAgfVxuICAgICAgICAgICAgPHN0eWxlIGpzeD57YFxuICAgICAgICAgICAgICBoMSwgYSB7XG4gICAgICAgICAgICAgICAgZm9udC1mYW1pbHk6IFwiQXJpYWxcIjtcbiAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgIHVsIHtcbiAgICAgICAgICAgICAgICBwYWRkaW5nOiAwO1xuICAgICAgICAgICAgICB9XG5cbiAgICAgICAgICAgICAgbGkge1xuICAgICAgICAgICAgICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgICAgICAgICAgICAgbWFyZ2luOiA1cHggMDtcbiAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgIGEge1xuICAgICAgICAgICAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICAgICAgICAgICAgICBjb2xvcjogYmx1ZTtcbiAgICAgICAgICAgICAgfVxuXG4gICAgICAgICAgICAgIGE6aG92ZXIge1xuICAgICAgICAgICAgICAgIG9wYWNpdHk6IDAuNjtcbiAgICAgICAgICAgICAgfVxuICAgICAgICAgICAgYH1cbiAgICAgICAgICAgIDwvc3R5bGU+XG4gICAgICAgICAgPC9SZWFjdC5GcmFnbWVudD5cbiAgICAgICAgKVxuICAgICAgfVxuICAgIH1cbiAgPC9BcHBDb250ZXh0LkNvbnN1bWVyPlxuKVxuXG5leHBvcnQgZGVmYXVsdCBTaG93U2VhcmNoO1xuIl19 */\n/*@ sourceURL=/Users/rotimi/Documents/JS-Stuff/hello-next/components/ShowSearch.js */"
+    }));
   });
 };
 
@@ -383,22 +398,14 @@ var ShowSearch = function ShowSearch() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/link */ "next/link");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! isomorphic-unfetch */ "isomorphic-unfetch");
-/* harmony import */ var isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(isomorphic_unfetch__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
-/* harmony import */ var _components_AppProvider__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/AppProvider */ "./components/AppProvider.js");
-/* harmony import */ var _components_ShowSearch__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/ShowSearch */ "./components/ShowSearch.js");
-
-
-
+/* harmony import */ var _components_MyLayout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/MyLayout */ "./components/MyLayout.js");
+/* harmony import */ var _components_ShowSearch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ShowSearch */ "./components/ShowSearch.js");
 
 
 
 
 var Index = function Index() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_3__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Search for TV shows"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowSearch__WEBPACK_IMPORTED_MODULE_5__["default"], null));
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_MyLayout__WEBPACK_IMPORTED_MODULE_1__["default"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_ShowSearch__WEBPACK_IMPORTED_MODULE_2__["default"], null));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
@@ -428,17 +435,6 @@ module.exports = require("@babel/runtime/regenerator");
 
 /***/ }),
 
-/***/ "isomorphic-unfetch":
-/*!*************************************!*\
-  !*** external "isomorphic-unfetch" ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("isomorphic-unfetch");
-
-/***/ }),
-
 /***/ "next/link":
 /*!****************************!*\
   !*** external "next/link" ***!
@@ -458,6 +454,17 @@ module.exports = require("next/link");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-jsx/style":
+/*!***********************************!*\
+  !*** external "styled-jsx/style" ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-jsx/style");
 
 /***/ })
 

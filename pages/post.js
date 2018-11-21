@@ -18,8 +18,6 @@ Post.getInitialProps = async function (context) {
   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
   const show = await res.json();
 
-  console.log(`Name: ${show.name}`);
-
   return { show };
 }
 
